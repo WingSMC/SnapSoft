@@ -1,0 +1,52 @@
+### These three should work as intended
+POST http://localhost:3000/api/calculate/a
+Content-Type: application/json
+
+{
+	"input": [1,2,3,4],
+	"comment": "test"
+}
+###
+POST http://localhost:3000/api/calculate/b
+Content-Type: application/json
+
+{
+	"input": [5,6,7,8],
+	"comment": "test"
+}
+###
+POST http://localhost:3000/api/calculate/c
+Content-Type: application/json
+
+{
+	"input": [9,10,11,12],
+	"comment": "test3"
+}
+###
+GET http://localhost:3000/api/history?filter=test3
+### This shouldn't exist
+POST http://localhost:3000/api/calculate/d
+Content-Type: application/json
+
+{
+	"input": [1,2,3,4],
+	"comment": "test"
+}
+### This should send an error (no comment)
+POST http://localhost:3000/api/calculate/a
+Content-Type: application/json
+
+{
+	"input": [1,2,3,4]
+}
+### This should send an error (comment is not a string)
+POST http://localhost:3000/api/calculate/a
+Content-Type: application/json
+
+{
+	"input": [1,2,3,4],
+	"comment": {}
+}
+### This should send an error (no filter)
+GET http://localhost:3000/api/history
+

@@ -1,0 +1,12 @@
+/node_modules
+/src
+/test
+
+README.md
+tsconfig.json
+pnpm-lock.yaml
+.env
+.gitignore
+.dockerignore
+docker-compose.yml
+Dockerfile
