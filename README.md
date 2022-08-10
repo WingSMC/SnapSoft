@@ -1,5 +1,7 @@
 # SnapSoft homework - Gergely Dremák
 
+Disclaimer: The .env is only included for development purposes.
+
 ## Prerequisites
 
 - Node.js & npm/pnpm/yarn to
