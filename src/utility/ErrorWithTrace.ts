@@ -1,4 +1,4 @@
-export default class ErrorWithTrace {
+export default class ErrorWithTrace extends Error {
 	private _message: string
 	private _trace: string
 	private _status: number
